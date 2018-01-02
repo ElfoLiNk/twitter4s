@@ -3,7 +3,7 @@ import com.typesafe.sbt.SbtGit.{GitKeys => git}
 enablePlugins(GhpagesPlugin, SiteScaladocPlugin)
 
 name := "twitter4s"
-version := "6.0-SNAPSHOT"
+version := "5.4-SNAPSHOT"
 
 scalaVersion := "2.12.4"
 
@@ -15,12 +15,13 @@ resolvers ++= Seq(
 libraryDependencies ++= {
 
   val Typesafe = "1.3.2"
-  val Akka = "2.5.6"
+  val Akka = "2.5.8"
   val AkkaHttp = "10.0.10"
   val AkkaHttpJson4s = "1.18.1"
   val Json4s = "3.5.3"
-  val Spec2 = "4.0.1"
+  val Specs2 = "4.0.1"
   val ScalaLogging = "3.7.2"
+  val RandomDataGenerator = "2.3"
 
   Seq(
     "com.typesafe" % "config" % Typesafe,
@@ -31,9 +32,10 @@ libraryDependencies ++= {
     "org.json4s" %% "json4s-native" % Json4s,
     "org.json4s" %% "json4s-ext" % Json4s,
     "com.typesafe.scala-logging" %% "scala-logging" % ScalaLogging,
-    "org.specs2" %% "specs2-core" % Spec2 % "test",
-    "org.specs2" %% "specs2-mock" % Spec2 % "test",
-    "com.typesafe.akka" %% "akka-testkit" % Akka % "test"
+    "org.specs2" %% "specs2-core" % Specs2 % "test",
+    "org.specs2" %% "specs2-mock" % Specs2 % "test",
+    "com.typesafe.akka" %% "akka-testkit" % Akka % "test",
+    "com.danielasfregola" %% "random-data-generator" % RandomDataGenerator % "test"
   )
 }
 
