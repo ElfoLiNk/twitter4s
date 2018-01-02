@@ -25,7 +25,6 @@ scala:
   - 2.11.12
 
 jdk:
-  - openjdk7
   - oraclejdk8
 
 # whitelist
